@@ -3,8 +3,16 @@
 **Table of Contents**
 1. [smaceps](#smaceps)
 2. [dmaceps](#dmaceps)
-3. [Sub paragraph](#subparagraph1)
-3. [Another paragraph](#paragraph2)
+3. [l2-norm](#l2-norm)
+4. [l1-norm](#l1-norm)
+5. [linf-norm](#linf-norm)
+6. [l2-distance](#l2-distance)
+7. [linf-distance](#linf-distance)
+8. [linreg](#linreg)
+9. [fordiff](#fordiff)
+10. [backdiff](#backdiff)
+11. [upperTriangular](#upperTriangular)
+12. [backSubstitution](#backSubstitution)
 
 <hr>
 <a id="smaceps"></a>
@@ -124,6 +132,7 @@ Output from the lines above:
 
 
 <hr>
+<a id="l2-norm"></a>
 
 **Routine Name:**  l2-norm         
 
@@ -175,7 +184,7 @@ Output from the lines above:
 **Last Modified:** October/2023
 
 <hr>
-
+<a id="l1-norm"></a>
 **Routine Name:**   l1-norm        
 
 **Author:** Carter Green
@@ -227,6 +236,8 @@ Output from the lines above:
 
 
 <hr>
+
+<a id="linf-norm"></a>
 
 **Routine Name:**   linf-norm        
 
@@ -282,6 +293,8 @@ Output from the lines above:
 
 <hr>
 
+<a id="l2-distance"></a>
+
 **Routine Name:**    l2-distance       
 
 **Author:** Carter Green
@@ -334,6 +347,8 @@ Output from the lines above:
 
 
 <hr>
+
+<a id="l1-distance"></a>
 
 **Routine Name:**     l1-distance      
 
@@ -391,6 +406,8 @@ Output from the lines above:
 
 <hr>
 
+<a id="linf-distance"></a>
+
 **Routine Name:**      linf-distance     
 
 **Author:** Carter Green
@@ -446,6 +463,8 @@ Output from the lines above:
 
 
 <hr>
+
+<a id="linreg"></a>
 
 **Routine Name:**     linreg      
 
@@ -525,6 +544,8 @@ Output from the lines above:
 
 <hr>
 
+<a id="fordiff"></a>
+
 **Routine Name:**    fordiff       
 
 **Author:** Carter Green
@@ -581,6 +602,8 @@ Output from the lines above:
 
 
 <hr>
+
+<a id="backdiff"></a>
 
 **Routine Name:**           backdiff
 
@@ -644,6 +667,8 @@ Output from the lines above:
 
 
 <hr>
+
+<a id="upperTriangular"></a>
 
 **Routine Name:**           upperTriangular
 
@@ -747,6 +772,8 @@ Output from the lines above:
 
 <hr>
 
+<a id="backSubstitution"></a>
+
 **Routine Name:**           backSubstitution
 
 **Author:** Carter Green
@@ -823,6 +850,8 @@ Output from the lines above:
 
 
 <hr>
+
+<a id=""></a>
 
 **Routine Name:**           
 
