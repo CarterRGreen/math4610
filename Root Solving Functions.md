@@ -1,11 +1,11 @@
 # Math 4610 Fundamentals of Computational Mathematics Root Solving Functions
 
 **Table of Contents**
-1. [Bisection Method](#BisectionMethod)
-2. [Newton's Method](#Newton'sMethod)
-3. [Secant Method](#SecantMethod)
-4. [Hybrid Method](#HybridMethod)
-5. [Hybrid Method Known Root](#HybridMethodKnownRoot)
+1. [BisectionMethod](#BisectionMethod)
+2. [Newton'sMethod](#Newton'sMethod)
+3. [SecantMethod](#SecantMethod)
+4. [HybridMethod](#HybridMethod)
+5. [HybridMethodKnownRoot](#HybridMethodKnownRoot)
 6. [LogisticODERoots](#LogisticODERoots)
 7. [TestRoutine](#TestRoutine)
 
