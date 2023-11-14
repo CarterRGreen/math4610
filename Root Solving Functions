@@ -1,0 +1,83 @@
+# Math 4610 Fundamentals of Computational Mathematics Root Solving Functions
+
+**Table of Contents**
+1. [](#)
+
+
+
+<hr>
+
+<a id="Bisection Method"></a>
+
+**Routine Name:**    Bisection Method
+
+**Author:** Carter Green
+
+**Language:** python. This code can be imported using import statements  
+
+**Description/Purpose:** Given two endpoints with opposite signs of function values (one is positive and one is negative), this method will solve for an x-value where the function equals zero. This does have the requirements that the function
+
+**Input:** 
+
+**Output:** 
+
+**Usage/Example:**
+
+
+
+
+Output from the lines above:
+
+  
+
+
+     
+
+**Implementation/Code:** The following is the code for 
+
+   
+
+**Last Modified:** October/2023
+
+
+
+<hr>
+
+<a id=""></a>
+
+**Routine Name:**          
+
+**Author:** Carter Green
+
+**Language:** python. This code can be imported using import statements  
+
+**Description/Purpose:** 
+
+**Input:** 
+
+**Output:** 
+
+**Usage/Example:**
+
+
+
+
+Output from the lines above:
+
+  
+
+
+     
+
+**Implementation/Code:** The following is the code for 
+
+   
+
+**Last Modified:** October/2023
+
+
+
+
+
+
+
