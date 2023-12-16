@@ -5,6 +5,7 @@
 2. [jacobiLeslie](#jacobiLeslie)
 3. [makeLeslie](#makeLeslie)
 4. [gaussSeidelIteration](#gaussSeidelIteration)
+5. [testCode](#testCode)
 
 
 <hr>
@@ -321,35 +322,148 @@ Output from the lines above:
 
 <hr>
 
-<a id=""></a>
+<a id="testCode"></a>
 
-**Routine Name:**    Format Example      
+**Routine Name:**    testCode    
 
 **Author:** Carter Green
 
 **Language:** python. This code can be imported using import statements  
 
-**Description/Purpose:** 
+**Description/Purpose:** This method tests the methods explained in this file and then compares them to an LU-factorization method of solving. Make sure that if running this code you have downloaded the tabulate methods from the internet.
 
-**Input:** 
+**Input:** This method has no inputs.
 
-**Output:** 
+**Output:** This method has no outputs.
 
 **Usage/Example:**
 
+    main()
 
 
 
 Output from the lines above:
+
+    Error for Jacobi:  2.641006762881539e-08
+    Error for Jacobi Iteration on a Leslie Matrix:  1.5700924586837752e-16
+    Error for Gauss-Seidel:  1.8219216975537628e-09
+    Error for LU-Factorization:  5.674097786814442e-15
+      Jacobi error    Jacobi FLOPS    G.S. error    G.S. FLOPS     LU error    LU FLOPS
+    --------------  --------------  ------------  ------------  -----------  ----------
+       2.54299e-08          550827   1.91272e-09        402010  3.18877e-15      711350
+       3.00448e-08          550827   2.41212e-09        402010  2.95938e-15      711350
+       2.91761e-08          550827   2.59832e-09        402010  2.99736e-15      711350
+       3.14929e-08          550827   2.10264e-09        402010  2.8011e-15       711350
+       2.29135e-08          550827   1.89959e-09        402010  2.6401e-15       711350
+       3.28202e-08          550827   2.48891e-09        402010  2.9154e-15       711350
+       2.92467e-08          550827   1.98246e-09        402010  3.13384e-15      711350
+       2.83322e-08          550827   2.26965e-09        402010  2.7862e-15       711350
+       1.70223e-08          571228   2.61696e-09        402010  3.27929e-15      711350
+       1.99432e-08          550827   1.72574e-09        402010  3.27535e-15      711350
+       2.64453e-08          550827   1.95739e-09        402010  2.97894e-15      711350
+       3.06034e-08          550827   2.5241e-09         402010  2.48905e-15      711350
+       2.44806e-08          550827   2.01409e-09        402010  2.91769e-15      711350
+       2.7189e-08           550827   2.56603e-09        402010  2.47772e-15      711350
+       2.38508e-08          550827   2.21612e-09        402010  2.60713e-15      711350
+       1.8408e-08           571228   2.48226e-09        402010  2.6364e-15       711350
+       3.14352e-08          550827   2.47517e-09        402010  3.08188e-15      711350
+       2.7744e-08           550827   2.4814e-09         402010  3.13492e-15      711350
+       2.99935e-08          550827   1.7817e-09         402010  3.16867e-15      711350
+       2.97153e-08          550827   1.90869e-09        402010  3.09439e-15      711350
+    
 
   
 
 
      
 
-**Implementation/Code:** The following is the code for 
+**Implementation/Code:** The following is the code for testCode. Assume all files imported are in the same folder as the method.
 
-   
+        from jacobiIteration import *
+        from matrixTimesVector import *
+        from twoNormDistance import *
+        from makeMatrix import *
+        from jacobiLeslie import *
+        from gaussSeidelIteration import *
+        from LUfactorization import *
+        from forwardSubDiagEquals1 import *
+        from backSubstitution import *
+        from tabulate import tabulate
+        
+        def LUFactor(A, y, x0):
+            counter = 0
+            counter += LUfactorization(A)
+            
+            y2 = forwardSubDiagEquals1(A, y)
+            counter += (2*len(x0) - 1) * len(x0)
+            x2 = backSubstitution(A, y2)
+            counter += (2*len(x0) - 1) * len(x0)
+            return x2, counter
+        
+        #test code for LinearSystems
+        def main():
+            #test Jacobi Iteration
+            A = makeMatrix(100)
+            x = makeVector(100)
+            y = matrixTimesVector(A, x)
+            x0 = makeVectorOne(100)
+            x1, counterJ = jacobiIteration(A, y, x0)
+            print("Error for Jacobi: ", twoNormDistance(x, x1))
+        
+            #test Jacobi on a Leslie Matrix
+            A1 = makeLeslie(5)
+            x = makeVector(5)
+            y = matrixTimesVector(A1, x)
+            x0 = makeVectorOne(5)
+            x1 = jacobiLeslie(A1, y, x0)
+            print("Error for Jacobi Iteration on a Leslie Matrix: ", twoNormDistance(x, x1))
+        
+            #test Gauss-Seidel
+            A = makeMatrix(100)
+            x = makeVector(100)
+            y = matrixTimesVector(A, x)
+            x0 = makeVectorOne(100)
+            x1, counterG = gaussSeidelIteration(A, y, x0)
+            print("Error for Gauss-Seidel: ", twoNormDistance(x, x1))
+        
+            #test LU Factorization
+            n = 100
+            A = makeMatrix(n)
+            x = makeVectorOne(n)
+            y = matrixTimesVector(A,x)
+            x1L, counterL = LUFactor(A, y, x0)
+            print("Error for LU-Factorization: ", twoNormDistance(x, x1L))
+        
+        
+            #compare the 3 methods in a table
+            data = []
+            for i in range(20):
+                data.append([])
+                A = makeMatrix(100)
+                x = makeVector(100)
+                y = matrixTimesVector(A, x)
+                x0 = makeVectorOne(100)
+        
+                #Jacobi
+                x1J, counterJ = jacobiIteration(A, y, x0)
+                data[i].append(twoNormDistance(x,x1J))
+                data[i].append(counterJ)
+        
+                #Gauss-Seidel
+                x1G, counterG = gaussSeidelIteration(A, y, x0)
+                data[i].append(twoNormDistance(x,x1G))
+                data[i].append(counterG)
+        
+                #LU Factorazation
+                x1L, counterL = LUFactor(A, y, x0)
+                data[i].append(twoNormDistance(x,x1L))
+                data[i].append(counterL)
+                
+            print(tabulate( data, headers=["Jacobi error", "Jacobi FLOPS", "G.S. error", "G.S. FLOPS", "LU error", "LU FLOPS"] ))
+        
+        main()
+
+
 
 **Last Modified:** December/2023
 
