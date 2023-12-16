@@ -1,8 +1,8 @@
 # Math 4610 Fundamentals of Computational Mathematics Open MP Programs
 
 **Table Of Contents**
-1. [jacobi](#jacobi)
-2. [power_method](#power_method)
+1. [jacobiOpenMP](#jacobi)
+2. [power_methodOpenMP](#power_method)
 
 
 
