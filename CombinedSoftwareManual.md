@@ -37,8 +37,8 @@
 36. [linreg](#linreg)
 37. [fordiff](#fordiff)
 38. [backdiff](#backdiff)
-39. [upperTriangular](#upperTriangular)
-40. [backSubstitution](#backSubstitution)
+39. [upperTriangular](#upperTriangular1)
+40. [backSubstitution](#backSubstitution1)
 41. [jacobiOpenMP](#jacobi)
 42. [power_methodOpenMP](#power_method)
 
@@ -2478,41 +2478,6 @@ The following are example outputs for what this function will output:
 
 
 
-
-
-<hr>
-
-<a id=""></a>
-
-**Routine Name:**          
-
-**Author:** Carter Green
-
-**Language:** python. This code can be imported using import statements  
-
-**Description/Purpose:** 
-
-**Input:** 
-
-**Output:** 
-
-**Usage/Example:**
-
-
-
-
-Output from the lines above:
-
-  
-
-
-     
-
-**Implementation/Code:** The following is the code for 
-
-   
-
-**Last Modified:** October/2023
 <hr>
 <a id="smaceps"></a>
 
@@ -3167,7 +3132,7 @@ Output from the lines above:
 
 <hr>
 
-<a id="upperTriangular"></a>
+<a id="upperTriangular1"></a>
 
 **Routine Name:**           upperTriangular
 
@@ -3271,7 +3236,7 @@ Output from the lines above:
 
 <hr>
 
-<a id="backSubstitution"></a>
+<a id="backSubstitution1"></a>
 
 **Routine Name:**           backSubstitution
 
@@ -3342,49 +3307,6 @@ Output from the lines above:
 		x[i] = (b[i] - sum)/a[i][i];
 	}
     }
-     
-
-**Last Modified:** October/2023
-
-
-
-<hr>
-
-<a id=""></a>
-
-**Routine Name:**           
-
-**Author:** Carter Green
-
-**Language:** C. The code can be compiled using the GCC C compiler (gcc).
-
-For example,
-
-    gcc 
-
-will produce an executable **./a.exe** than can be executed. If you want a different name, the following will work a bit
-better
-
-    gcc 
-
-**Description/Purpose:** 
-
-**Input:** 
-
-**Output:** 
-
-**Usage/Example:**
-
-
-
-Output from the lines above:
-
-  
-
-
-     
-
-**Implementation/Code:** The following is the code for 
      
 
 **Last Modified:** October/2023
