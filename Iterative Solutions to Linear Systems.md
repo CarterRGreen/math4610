@@ -12,7 +12,7 @@
 
 <a id="jacobiIteration"></a>
 
-**Routine Name:**  acobiIteration        
+**Routine Name:**  jacobiIteration        
 
 **Author:** Carter Green
 
