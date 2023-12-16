@@ -1,4 +1,4 @@
-#Software Manual for OpenMP Programs
+# Math 4610 Fundamentals of Computational Mathematics Software Manual Template File
 
 
 
@@ -35,3 +35,5 @@ Output from the lines above:
    
 
 **Last Modified:** October/2023
+
+
